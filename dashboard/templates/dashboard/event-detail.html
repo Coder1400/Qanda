@@ -1,0 +1,98 @@
+{% extends 'dashboard/bs_template/base.html' %}
+{% load static sekizai_tags %}
+
+  {% block content %}
+
+    {% addtoblock "css" %}
+      <link href="{%  static 'dashboard/css/event-detail.css' %}" rel="stylesheet">
+    {% endaddtoblock %}
+    <div class="top-container">
+      <div class="container">
+        <header>
+          <div class="row">
+            <div class="col-sm-12">
+              <h3>{{ object.name }}</h3>
+            </div>
+          </div>
+
+        </header>
+      </div>
+    </div>
+
+    <div class="container" style="min-height: 800px;">
+        <div class="row">
+
+          <div class="col-lg-3">
+            <div class="list-group mt-4">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-primary">Run</a>
+              <a href="#" class="list-group-item ist-group-item-action">Setup</a>
+              <a href="#" class="list-group-item ist-group-item-action">Analytics</a>
+            </div>
+          </div>
+          <!-- /.col-lg-3 -->
+
+
+
+
+          <div class="col-lg-9">
+
+             <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Speaker's Panel </h5>
+                <h4></h4>
+                <p class="card-text">
+                  This is where the speaker/lecturer can view all the questions that are being asked by his/her audience.
+                  From here, the speaker can chose to which questions to answer, skip over questions that are too lame,
+                  or even send out polls for the audience to respond to.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="{% url 'qa:lecturer:main' passcode=object.passcode %}" class="btn btn-outline-primary" role="button">Run panel</a>
+              </div>
+           </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Audience App </h5>
+                <p class="card-text">
+                  Run the Audience Web app to see exactly how audiences are able to ask questions.
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="{% url 'qa:audience:main' passcode=object.passcode %}" class="btn btn-outline-primary" role="button">Run app</a>
+              </div>
+            </div>
+
+
+            <!-- /.card -->
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Admin Panel </h5>
+                <h4></h4>
+                <p class="card-text">
+                  The Admin Panel allows an authorized individual to filter questions as they are coming in, block
+                  questioners, and make sure that questions are being asked in an appropriate manner
+                </p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-outline-secondary" role="button">Run Panel</a>
+              </div>
+            </div>
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col-lg-9 -->
+
+        </div>
+
+
+
+
+      <div id="react-root"></div>
+      {% comment %} Add the javascript files using django's template blocks {% endcomment %}
+      {% addtoblock 'js' %}
+        <script type="text/babel" src="{% static 'dashboard/eventDetail.jsx' %}"></script>
+      {% endaddtoblock %}
+   </div>
+  {% endblock %}

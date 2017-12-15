@@ -1,0 +1,26 @@
+{% extends 'dashboard/bs_template/base.html' %}
+{% load static sekizai_tags %}
+
+  {% block content %}
+    <div class="container" style="min-height: 800px;">
+
+      {% addtoblock "css" %}
+        <link href="{%  static 'dashboard/css/dashboard.css' %}" rel="stylesheet">
+      {% endaddtoblock %}
+
+      <div id="react-root"></div>
+
+      {% comment %} Add the javascript files using django's template blocks {% endcomment %}
+      {% addtoblock 'js' %}
+        <script type="text/babel" src="{% static 'dashboard/dashboard.jsx' %}"></script>
+      {% endaddtoblock %}
+
+    </div>
+
+  {% endblock %}
+
+
+
+
+
+

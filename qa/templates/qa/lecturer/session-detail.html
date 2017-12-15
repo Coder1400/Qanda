@@ -1,0 +1,28 @@
+{% extends 'dashboard/bs_template/base.html' %}
+{% load static sekizai_tags %}
+
+  {% block nav_brand %}
+    QandA - <span class="nav-brand-lecturer">Lecturer's Panel</span>
+  {% endblock %}
+  {% block content %}
+
+    {% addtoblock "css" %}
+      <link href="{%  static 'qa/lecturer/css/session-detail.css' %}" rel="stylesheet">
+    {% endaddtoblock %}
+
+    <div class="container-fluid" style="min-height: 800px;">
+      <br /><br /><br />
+      <div id="react-root"></div>
+
+      {% comment %} Add the javascript files using django's template blocks {% endcomment %}
+      {% addtoblock 'js' %}
+
+        <script src="//cdn.ably.io/lib/ably.min-1.js"></script>
+        <script type="text/javascript">
+          var _realtime = new Ably.Realtime('1Y5S8g.5Tq2og:WNvhN6i34FJpKT-U');
+          var s_p_k = {{ object.pk}};
+        </script>
+        <script type="text/babel" src="{% static 'qa/lecturer/sessionDetail.jsx' %}"></script>
+      {% endaddtoblock %}
+   </div>
+  {% endblock %}

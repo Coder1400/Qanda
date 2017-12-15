@@ -1,0 +1,47 @@
+{% extends 'dashboard/bs_template/base.html' %}
+{% load static sekizai_tags %}
+
+  {% block content %}
+
+    {% addtoblock "css" %}
+
+    {% endaddtoblock %}
+    <div class="container" style="min-height: 800px;">
+      <br /><br /><br />
+        <h4 style="text-align: center;">Welcome to {{ object.name }}!</h4>
+        <p style="text-align: center;">Select a room below</p>
+
+
+        <div class="row justify-content-center">
+          <div class="col-sm-8 mt-4">
+            {% for session in object.session_set.all %}
+              <div class="card">
+                <div class="card-body">
+                  <div class ="row">
+                    <div class="col-md-9">
+                      <h3 class="card-title">{{ session.name }} </h3>
+                    </div>
+                    <div class="col-md-3 text-md-right">
+                      <a href="{% url 'qa:audience:session-detail' passcode=object.passcode pk=session.pk %}" class="btn btn-outline-secondary" role="button">Enter</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+            <!-- /.card -->
+
+          </div>
+          <!-- /.col-lg-9 -->
+
+        </div>
+
+
+
+
+      <div id="react-root"></div>
+      {% comment %} Add the javascript files using django's template blocks {% endcomment %}
+      {% addtoblock 'js' %}
+
+    {% endaddtoblock %}
+   </div>
+  {% endblock %}

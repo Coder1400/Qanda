@@ -1,0 +1,1 @@
+# This is the application which is in charge of all dashboard logic - the side that the purchaser has access to.

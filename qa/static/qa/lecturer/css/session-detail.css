@@ -1,0 +1,57 @@
+
+.container-fluid{
+    background: #e8e8e8;
+}
+
+.navbar{
+     background: #203b69 !important;
+}
+.nav-brand-lecturer{
+    font-size: 18px;
+    font-family: "chalkboard";
+    color: lightgray;
+}
+.panel{
+    padding: 0px 7px 40px 7px;
+}
+.question-single{
+    padding: 5px;
+}
+
+.card-title .vote-word{
+    font-weight: 300;
+    font-size: .9em;
+}
+
+.question-single .card{
+}
+.question-single .card{
+    box-shadow: 1px 1px 5px #bfbfbf;
+}
+
+.question-single .card-text{
+    font-weight: 400;
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.question-single .card-footer .fa{
+    font-size: 22px;
+    color: #a9a9a9;
+    cursor: pointer;
+}
+
+.question-single .card-footer .icon-tags{
+    font-size: 13px;
+    color: #a9a9a9;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.question-single .card-footer .fa:hover{
+    color: black;
+
+}
+.question-single .card-footer .icon-container{
+    line-height: 1;
+}

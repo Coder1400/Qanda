@@ -1,0 +1,7 @@
+.top-container{
+    background: #efefef;
+    margin-top: 30px;
+    padding: 40px 10px 10px;
+    border-bottom: 1px solid #f2f2f2;
+    box-shadow: 0 4px 2px -2px #bababa;
+}

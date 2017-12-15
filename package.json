@@ -1,0 +1,18 @@
+{
+  "name": "qanda",
+  "version": "1.0.0",
+  "description": "The the best interactive QA in the world. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.engr.illinois.edu/amibrah2/finalproject.git"
+  },
+  "author": "Arken Ibrahim",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.1.1"
+  }
+}

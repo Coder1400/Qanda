@@ -1,0 +1,1 @@
+# This application is in charge of all logic related to the user side of the QA application - the audience of the purchaser.

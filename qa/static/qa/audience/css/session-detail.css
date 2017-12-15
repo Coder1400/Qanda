@@ -1,0 +1,42 @@
+.panel{
+    background: #e8e8e8;
+    padding: 10px 10px 60px 10px;
+    min-height: 400px;
+}
+
+.question-single{
+    padding: 0px;
+    margin: 0px;
+}
+.question-single .card-body{
+     box-shadow: 1px 1px 3px #b7b7b7;
+}
+
+.voting-container, .content-container{
+    display: inline-block;
+    vertical-align: top;
+}
+.voting-container{
+    text-align: center;
+    float: left;
+    max-width: 20%;
+    font-size: 26px;
+
+}
+.content-container{
+    margin-left:20px;
+    float: left;
+    max-width: 80%;
+}
+
+.fa-chevron-circle-up{
+    cursor: pointer;
+    font-size: 24px;
+}
+.fa-chevron-circle-up:hover{
+    color: mediumseagreen;
+}
+
+.fa-chevron-circle-up.has-up-voted{
+    color: mediumseagreen;
+}
